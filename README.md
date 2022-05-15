@@ -7,7 +7,35 @@
 
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+JDModule Show为demo其中
+
+```yaml
+├── JDModuleShow.xcworkspace
+├── JDModuleShow.xcodeproj
+├── AppDelegate.m
+├── AModule
+|   ├── AModuleDemo
+├── BModule
+|   ├── BModuleDemo
+|   ├── BModuleTask
+├── Router
+|   ├── Router.h
+├── Service
+|   ├── AmoduleProtocol
+|   ├── BmoduleProtocol
+├── Pods
+└── podfile
+└── podfile.lock
+```
+
+
+
+Amodule, Bmodule 表示2个独立模块
+
+Router.h 管理路由
+
+Service 下面管理服务
+
 
 ## Requirements
 

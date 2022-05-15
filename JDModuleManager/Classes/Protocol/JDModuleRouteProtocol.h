@@ -9,11 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol JDModuleRouterRegisterProtocol;
+@protocol JDModuleRegisterProtocol;
 @protocol JDModuleRouteProtocol <NSObject>
 
 /// 注册路由
-- (void)registerRouter:(NSString *)router forModule:(id<JDModuleRouterRegisterProtocol>)module;
+- (void)registerRouter:(NSString *)router forModule:(id<JDModuleRegisterProtocol>)module;
 
 /// 是否已经注册路由
 - (void)canOpenRouter:(NSString *)router;

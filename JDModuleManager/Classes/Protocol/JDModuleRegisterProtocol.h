@@ -1,5 +1,5 @@
 //
-//  JDModuleRouterRegisterProtocol.h
+//  JDModuleRegisterProtocol.h
 //  JDModuleManager
 //
 //  Created by Mac on 2022/5/15.
@@ -9,8 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class JDModuleServiceInfo;
+
 /// 模块路由协议
-@protocol JDModuleRouterRegisterProtocol <NSObject>
+@protocol JDModuleRegisterProtocol <NSObject>
 
 @optional
 // 注册路由
@@ -21,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
                          host:(NSString *)host
                          path:(NSString *)path
                        params:(NSDictionary *)params;
+
+// 注册服务
+- (NSArray<JDModuleServiceInfo *> *)registModuleServices;
 @end
 
 NS_ASSUME_NONNULL_END

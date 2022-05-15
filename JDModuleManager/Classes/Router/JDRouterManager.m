@@ -6,7 +6,7 @@
 //
 
 #import "JDRouterManager.h"
-#import "JDModuleRouterRegisterProtocol.h"
+#import "JDModuleRegisterProtocol.h"
 
 @implementation NSString (JDRoute)
 
@@ -94,7 +94,7 @@ static NSString * const kJDModuleRouteFakeScheme = @"kJDModuleRouteFakeScheme";
 
 @interface JDRouterManager()
 
-@property (nonatomic, strong) NSMapTable<NSString *, id<JDModuleRouterRegisterProtocol>> *routeMapping;
+@property (nonatomic, strong) NSMapTable<NSString *, id<JDModuleRegisterProtocol>> *routeMapping;
 
 @end
 
@@ -180,7 +180,7 @@ static NSString * const kJDModuleRouteFakeScheme = @"kJDModuleRouteFakeScheme";
     [params setValuesForKeysWithDictionary:queryDic];
     [params setValuesForKeysWithDictionary:userInfo];
     
-    id<JDModuleRouterRegisterProtocol> module = [self.routeMapping objectForKey:[host lowercaseString]];
+    id<JDModuleRegisterProtocol> module = [self.routeMapping objectForKey:[host lowercaseString]];
     
     if ([module respondsToSelector:@selector(handleRouteWithScheme:host:path:params:)]) {
         [module handleRouteWithScheme:scheme host:host path:path params: params];
@@ -189,9 +189,9 @@ static NSString * const kJDModuleRouteFakeScheme = @"kJDModuleRouteFakeScheme";
     return YES;
 }
 
-- (void)registerRouter:(nonnull NSString *)router forModule:(nonnull id<JDModuleRouterRegisterProtocol>)module {
-    if (![module conformsToProtocol:@protocol(JDModuleRouterRegisterProtocol)]) {
-        NSLog(@"必须遵循JDModuleRouterRegisterProtocol协议");
+- (void)registerRouter:(nonnull NSString *)router forModule:(nonnull id<JDModuleRegisterProtocol>)module {
+    if (![module conformsToProtocol:@protocol(JDModuleRegisterProtocol)]) {
+        NSLog(@"必须遵循JDModuleRegisterProtocol协议");
         return;
     }
     

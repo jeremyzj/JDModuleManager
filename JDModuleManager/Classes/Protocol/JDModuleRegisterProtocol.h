@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class JDModuleServiceInfo;
+@protocol JDLaunchTaskProtocol;
 
 /// 模块路由协议
 @protocol JDModuleRegisterProtocol <NSObject>
@@ -26,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 注册服务
 - (NSArray<JDModuleServiceInfo *> *)registModuleServices;
+
+// 注册启动任务
+- (NSArray<Class<JDLaunchTaskProtocol>> *)registLaunchTasks;
 @end
 
 NS_ASSUME_NONNULL_END

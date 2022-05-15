@@ -10,6 +10,7 @@
 #import "JDRouterManager.h"
 #import "JDModuleServeManager.h"
 #import "JDModuleServiceInfo.h"
+#import "JDModuleTaskManager.h"
 
 static NSString *const kModulesKey = @"modules";
 
@@ -29,6 +30,8 @@ static NSString *const kModulesKey = @"modules";
 
     // 加载Modules
     [self loadModules];
+    
+    [[JDModuleTaskManager oneInstance] executeLaunchTasks];
     
     return YES;
 }
@@ -54,6 +57,14 @@ static NSString *const kModulesKey = @"modules";
             NSArray *services = [instance registModuleServices];
             for (JDModuleServiceInfo *info in services) {
                 [[JDModuleServeManager oneInstance] registService:info];
+            }
+        }
+        
+        /// 注册task服务
+        if ([instance respondsToSelector:@selector(registLaunchTasks)]) {
+            NSArray *tasks = [instance registLaunchTasks];
+            for (Class cls in tasks) {
+                [[JDModuleTaskManager oneInstance] registLaunchTask:cls];
             }
         }
     }

@@ -1,0 +1,16 @@
+PODS:
+  - JDModuleManager (0.1.0)
+
+DEPENDENCIES:
+  - JDModuleManager (from `../`)
+
+EXTERNAL SOURCES:
+  JDModuleManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JDModuleManager: 54a90a0295c6becd56b498fed4b8b40639cc7023
+
+PODFILE CHECKSUM: a348c2df3d957b4c0e6f67c2b02cb2c0bf1976c9
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,4 @@
+target 'JDModuleShow' do
+    pod 'JDModuleManager', :path=>'../'
+  end
+  

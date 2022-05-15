@@ -1,0 +1,6 @@
+{
+    "modules": [
+        "AModuleDemo",
+        "BModuleDemo"
+    ]
+}

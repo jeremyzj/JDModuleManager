@@ -1,6 +1,0 @@
-use_frameworks!
-target 'JDModuleManager_Tests' do
-  pod 'JDModuleManager', :path => '../'
-  
-  
-end

@@ -1,0 +1,6 @@
+use_frameworks!
+target 'CModule_Tests' do
+  pod 'CModule', :path => '../'
+  
+  
+end

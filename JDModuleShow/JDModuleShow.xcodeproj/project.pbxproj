@@ -18,9 +18,6 @@
 		04BD6306282F4B2B001C9439 /* JDModuleShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD6305282F4B2B001C9439 /* JDModuleShowUITests.m */; };
 		04BD6308282F4B2B001C9439 /* JDModuleShowUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD6307282F4B2B001C9439 /* JDModuleShowUITestsLaunchTests.m */; };
 		04E9C6A72830F39C00EBADBC /* modules.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E9C6A62830F39C00EBADBC /* modules.json */; };
-		04E9C6DE283132FB00EBADBC /* AModuleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C6D4283132FB00EBADBC /* AModuleDemo.m */; };
-		04E9C6DF283132FB00EBADBC /* BModuleTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C6D7283132FB00EBADBC /* BModuleTask.m */; };
-		04E9C6E0283132FB00EBADBC /* BModuleDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E9C6D8283132FB00EBADBC /* BModuleDemo.m */; };
 		E3E59FED95CA384E5869F7B9 /* libPods-JDModuleShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01148B8B8E8CDF0119F0D805 /* libPods-JDModuleShow.a */; };
 /* End PBXBuildFile section */
 
@@ -61,15 +58,6 @@
 		04BD6305282F4B2B001C9439 /* JDModuleShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDModuleShowUITests.m; sourceTree = "<group>"; };
 		04BD6307282F4B2B001C9439 /* JDModuleShowUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JDModuleShowUITestsLaunchTests.m; sourceTree = "<group>"; };
 		04E9C6A62830F39C00EBADBC /* modules.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = modules.json; sourceTree = "<group>"; };
-		04E9C6D4283132FB00EBADBC /* AModuleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AModuleDemo.m; sourceTree = "<group>"; };
-		04E9C6D5283132FB00EBADBC /* AModuleDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AModuleDemo.h; sourceTree = "<group>"; };
-		04E9C6D7283132FB00EBADBC /* BModuleTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BModuleTask.m; sourceTree = "<group>"; };
-		04E9C6D8283132FB00EBADBC /* BModuleDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BModuleDemo.m; sourceTree = "<group>"; };
-		04E9C6D9283132FB00EBADBC /* BModuleTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BModuleTask.h; sourceTree = "<group>"; };
-		04E9C6DA283132FB00EBADBC /* BModuleDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BModuleDemo.h; sourceTree = "<group>"; };
-		04E9C6DC283132FB00EBADBC /* BModuleServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BModuleServiceProtocol.h; sourceTree = "<group>"; };
-		04E9C6DD283132FB00EBADBC /* AModuleServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AModuleServiceProtocol.h; sourceTree = "<group>"; };
-		04E9C6E22831330F00EBADBC /* Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Router.h; sourceTree = "<group>"; };
 		68CD295AB68D4375DB6E01F7 /* Pods-JDModuleShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDModuleShow.release.xcconfig"; path = "Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow.release.xcconfig"; sourceTree = "<group>"; };
 		B2E14980B22991FD1CB3BA1E /* Pods-JDModuleShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDModuleShow.debug.xcconfig"; path = "Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,10 +113,6 @@
 		04BD62DE282F4B28001C9439 /* JDModuleShow */ = {
 			isa = PBXGroup;
 			children = (
-				04E9C6E12831330F00EBADBC /* Router */,
-				04E9C6D3283132FB00EBADBC /* AModule */,
-				04E9C6D6283132FB00EBADBC /* BModule */,
-				04E9C6DB283132FB00EBADBC /* Service */,
 				04BD62DF282F4B28001C9439 /* AppDelegate.h */,
 				04BD62E0282F4B28001C9439 /* AppDelegate.m */,
 				04BD62E2282F4B28001C9439 /* SceneDelegate.h */,
@@ -160,43 +144,6 @@
 				04BD6307282F4B2B001C9439 /* JDModuleShowUITestsLaunchTests.m */,
 			);
 			path = JDModuleShowUITests;
-			sourceTree = "<group>";
-		};
-		04E9C6D3283132FB00EBADBC /* AModule */ = {
-			isa = PBXGroup;
-			children = (
-				04E9C6D5283132FB00EBADBC /* AModuleDemo.h */,
-				04E9C6D4283132FB00EBADBC /* AModuleDemo.m */,
-			);
-			path = AModule;
-			sourceTree = "<group>";
-		};
-		04E9C6D6283132FB00EBADBC /* BModule */ = {
-			isa = PBXGroup;
-			children = (
-				04E9C6D9283132FB00EBADBC /* BModuleTask.h */,
-				04E9C6D7283132FB00EBADBC /* BModuleTask.m */,
-				04E9C6DA283132FB00EBADBC /* BModuleDemo.h */,
-				04E9C6D8283132FB00EBADBC /* BModuleDemo.m */,
-			);
-			path = BModule;
-			sourceTree = "<group>";
-		};
-		04E9C6DB283132FB00EBADBC /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				04E9C6DC283132FB00EBADBC /* BModuleServiceProtocol.h */,
-				04E9C6DD283132FB00EBADBC /* AModuleServiceProtocol.h */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		04E9C6E12831330F00EBADBC /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				04E9C6E22831330F00EBADBC /* Router.h */,
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		65064CFA7A54F9D119EE5800 /* Pods */ = {
@@ -374,12 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04BD62E7282F4B28001C9439 /* ViewController.m in Sources */,
-				04E9C6E0283132FB00EBADBC /* BModuleDemo.m in Sources */,
-				04E9C6DF283132FB00EBADBC /* BModuleTask.m in Sources */,
 				04BD62E1282F4B28001C9439 /* AppDelegate.m in Sources */,
 				04BD62F2282F4B2A001C9439 /* main.m in Sources */,
 				04BD62E4282F4B28001C9439 /* SceneDelegate.m in Sources */,
-				04E9C6DE283132FB00EBADBC /* AModuleDemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

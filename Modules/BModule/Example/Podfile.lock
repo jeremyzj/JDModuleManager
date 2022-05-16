@@ -1,0 +1,16 @@
+PODS:
+  - BModule (0.1.0)
+
+DEPENDENCIES:
+  - BModule (from `../`)
+
+EXTERNAL SOURCES:
+  BModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BModule: 84e66afc80fc7cb4d09def5d578966949896ce0c
+
+PODFILE CHECKSUM: e5423d1b021aae06d86f8ca75c766f44148bbf6d
+
+COCOAPODS: 1.11.2

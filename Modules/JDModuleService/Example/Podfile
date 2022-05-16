@@ -1,0 +1,6 @@
+use_frameworks!
+target 'JDModuleService_Tests' do
+  pod 'JDModuleService', :path => '../'
+  
+  
+end

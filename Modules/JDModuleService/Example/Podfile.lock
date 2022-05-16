@@ -1,0 +1,16 @@
+PODS:
+  - JDModuleService (0.1.0)
+
+DEPENDENCIES:
+  - JDModuleService (from `../`)
+
+EXTERNAL SOURCES:
+  JDModuleService:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JDModuleService: 8e3432d22e74a4652e83f1e291a30fd833562bdb
+
+PODFILE CHECKSUM: 7b6be80363a3247c28ec8950def9de0995ea3f87
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,16 @@
+PODS:
+  - JDModuleRouter (0.1.0)
+
+DEPENDENCIES:
+  - JDModuleRouter (from `../`)
+
+EXTERNAL SOURCES:
+  JDModuleRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JDModuleRouter: 611af66c3e2b84938f33108c0bac0e030ab9be75
+
+PODFILE CHECKSUM: 8d78c8876e60e7d24ac9a477bcaa8570e6a73bec
+
+COCOAPODS: 1.11.2

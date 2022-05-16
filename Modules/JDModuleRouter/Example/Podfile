@@ -1,0 +1,6 @@
+use_frameworks!
+target 'JDModuleRouter_Tests' do
+  pod 'JDModuleRouter', :path => '../'
+  
+  
+end

@@ -21,13 +21,13 @@
 	
 	 由各个业务组维护的彼此独立的业务；
 
-<img src="./img/layer1.png" alt="image" style="zoom:50%;" />
+![image](https://github.com/jeremyzj/JDModuleManager/blob/master/image/layer1.png)
 
 ### 解偶
 
 基础服务层，业务层的依赖需要解偶
 
-<img src="./img/layer2.png" alt="image" style="zoom:50%;" />
+![image](https://github.com/jeremyzj/JDModuleManager/blob/master/image/layer2.png)
 
 
 

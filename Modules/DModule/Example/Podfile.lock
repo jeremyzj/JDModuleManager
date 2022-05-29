@@ -1,0 +1,16 @@
+PODS:
+  - DModule (0.1.0)
+
+DEPENDENCIES:
+  - DModule (from `../`)
+
+EXTERNAL SOURCES:
+  DModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DModule: e90e7854b375bd51f845e3b2523538c08fb8f685
+
+PODFILE CHECKSUM: 0db4b5bad91ed322d539795166feec03f349cb56
+
+COCOAPODS: 1.11.2

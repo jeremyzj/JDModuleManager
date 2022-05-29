@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0466416928436005003105B8 /* DModuleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466416828436005003105B8 /* DModuleFile.swift */; };
 		04BD62E1282F4B28001C9439 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD62E0282F4B28001C9439 /* AppDelegate.m */; };
 		04BD62E4282F4B28001C9439 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD62E3282F4B28001C9439 /* SceneDelegate.m */; };
 		04BD62E7282F4B28001C9439 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD62E6282F4B28001C9439 /* ViewController.m */; };
@@ -18,7 +19,7 @@
 		04BD6306282F4B2B001C9439 /* JDModuleShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD6305282F4B2B001C9439 /* JDModuleShowUITests.m */; };
 		04BD6308282F4B2B001C9439 /* JDModuleShowUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BD6307282F4B2B001C9439 /* JDModuleShowUITestsLaunchTests.m */; };
 		04E9C6A72830F39C00EBADBC /* modules.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E9C6A62830F39C00EBADBC /* modules.json */; };
-		E3E59FED95CA384E5869F7B9 /* libPods-JDModuleShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01148B8B8E8CDF0119F0D805 /* libPods-JDModuleShow.a */; };
+		B1EFE997F61DF002DA894483 /* Pods_JDModuleShow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C76BD5B588BEBF4D9CC4C6 /* Pods_JDModuleShow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01148B8B8E8CDF0119F0D805 /* libPods-JDModuleShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JDModuleShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0466416728436005003105B8 /* JDModuleShow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JDModuleShow-Bridging-Header.h"; sourceTree = "<group>"; };
+		0466416828436005003105B8 /* DModuleFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DModuleFile.swift; sourceTree = "<group>"; };
 		04BD62DC282F4B28001C9439 /* JDModuleShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JDModuleShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD62DF282F4B28001C9439 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04BD62E0282F4B28001C9439 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		04E9C6A62830F39C00EBADBC /* modules.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = modules.json; sourceTree = "<group>"; };
 		68CD295AB68D4375DB6E01F7 /* Pods-JDModuleShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDModuleShow.release.xcconfig"; path = "Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow.release.xcconfig"; sourceTree = "<group>"; };
 		B2E14980B22991FD1CB3BA1E /* Pods-JDModuleShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JDModuleShow.debug.xcconfig"; path = "Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow.debug.xcconfig"; sourceTree = "<group>"; };
+		B9C76BD5B588BEBF4D9CC4C6 /* Pods_JDModuleShow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JDModuleShow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E59FED95CA384E5869F7B9 /* libPods-JDModuleShow.a in Frameworks */,
+				B1EFE997F61DF002DA894483 /* Pods_JDModuleShow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,8 @@
 				04BD62ED282F4B2A001C9439 /* LaunchScreen.storyboard */,
 				04BD62F0282F4B2A001C9439 /* Info.plist */,
 				04BD62F1282F4B2A001C9439 /* main.m */,
+				0466416828436005003105B8 /* DModuleFile.swift */,
+				0466416728436005003105B8 /* JDModuleShow-Bridging-Header.h */,
 			);
 			path = JDModuleShow;
 			sourceTree = "<group>";
@@ -158,7 +163,7 @@
 		93C719AD63099BAF2CEAEFFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01148B8B8E8CDF0119F0D805 /* libPods-JDModuleShow.a */,
+				B9C76BD5B588BEBF4D9CC4C6 /* Pods_JDModuleShow.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				04BD62D8282F4B28001C9439 /* Sources */,
 				04BD62D9282F4B28001C9439 /* Frameworks */,
 				04BD62DA282F4B28001C9439 /* Resources */,
+				F40AD1177F464F99A7310B5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,6 +237,7 @@
 				TargetAttributes = {
 					04BD62DB282F4B28001C9439 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					04BD62F6282F4B2A001C9439 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -313,6 +320,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F40AD1177F464F99A7310B5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JDModuleShow/Pods-JDModuleShow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -324,6 +348,7 @@
 				04BD62E1282F4B28001C9439 /* AppDelegate.m in Sources */,
 				04BD62F2282F4B2A001C9439 /* main.m in Sources */,
 				04BD62E4282F4B28001C9439 /* SceneDelegate.m in Sources */,
+				0466416928436005003105B8 /* DModuleFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -514,6 +540,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zj.JDModuleShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "JDModuleShow/JDModuleShow-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -524,6 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -541,6 +571,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zj.JDModuleShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "JDModuleShow/JDModuleShow-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -548,6 +580,7 @@
 		04BD630F282F4B2B001C9439 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -565,6 +598,7 @@
 		04BD6310282F4B2B001C9439 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -582,6 +616,7 @@
 		04BD6312282F4B2B001C9439 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -597,6 +632,7 @@
 		04BD6313282F4B2B001C9439 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

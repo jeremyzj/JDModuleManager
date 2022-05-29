@@ -2,6 +2,7 @@
     "modules": [
         "AModuleDemo",
         "BModuleDemo",
-        "CModuleDemo"
+        "CModuleDemo",
+        "DModule"
     ]
 }

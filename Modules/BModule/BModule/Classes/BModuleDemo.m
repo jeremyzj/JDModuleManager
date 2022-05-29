@@ -6,7 +6,7 @@
 //
 
 #import "BModuleDemo.h"
-#import <JDModuleRouter/Router.h>
+#import <JDModuleRouter/JDRouter.h>
 #import <JDModuleManager/JDModuleServiceInfo.h>
 #import "BModuleTask.h"
 

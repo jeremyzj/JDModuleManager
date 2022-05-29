@@ -1,13 +1,9 @@
 PODS:
-  - AModule (0.1.0):
-    - JDModuleManager
-    - JDModuleRouter
-    - JDModuleService
   - BModule (0.1.0):
     - JDModuleManager
     - JDModuleRouter
     - JDModuleService
-  - CModule (0.1.0):
+  - DModule (0.1.0):
     - JDModuleManager
     - JDModuleRouter
     - JDModuleService
@@ -16,20 +12,17 @@ PODS:
   - JDModuleService (0.1.0)
 
 DEPENDENCIES:
-  - AModule (from `../Modules/AModule`)
   - BModule (from `../Modules/BModule`)
-  - CModule (from `../Modules/CModule`)
+  - DModule (from `../Modules/DModule`)
   - JDModuleManager (from `../`)
   - JDModuleRouter (from `../Modules/JDModuleRouter`)
   - JDModuleService (from `../Modules/JDModuleService`)
 
 EXTERNAL SOURCES:
-  AModule:
-    :path: "../Modules/AModule"
   BModule:
     :path: "../Modules/BModule"
-  CModule:
-    :path: "../Modules/CModule"
+  DModule:
+    :path: "../Modules/DModule"
   JDModuleManager:
     :path: "../"
   JDModuleRouter:
@@ -38,13 +31,12 @@ EXTERNAL SOURCES:
     :path: "../Modules/JDModuleService"
 
 SPEC CHECKSUMS:
-  AModule: 2b5df5f98824af791e53cf9cd186a0356d3ffb81
   BModule: 2fa08026add826283c27a7124e9a41e783df156f
-  CModule: f81e830a54c351f043cab4c73839db990ca21f20
+  DModule: ac39e44a1ed046cb1e6194a4ad387249f5fc10ae
   JDModuleManager: 54a90a0295c6becd56b498fed4b8b40639cc7023
   JDModuleRouter: 611af66c3e2b84938f33108c0bac0e030ab9be75
   JDModuleService: 8e3432d22e74a4652e83f1e291a30fd833562bdb
 
-PODFILE CHECKSUM: bf8e0f4220e3f356489d9a808447081ebc0eec29
+PODFILE CHECKSUM: aea10db2fab37216103be67e288f41e9864b1c9a
 
 COCOAPODS: 1.11.2

@@ -21,13 +21,13 @@
 	
 	 由各个业务组维护的彼此独立的业务；
 
-![image](https://github.com/jeremyzj/JDModuleManager/blob/master/image/layer1.png)
+![image](image/layer1.png)
 
 ### 解偶
 
 基础服务层，业务层的依赖需要解偶
 
-![image](https://github.com/jeremyzj/JDModuleManager/blob/master/image/layer2.png)
+![image](image/layer2.png)
 
 
 
@@ -36,6 +36,7 @@
 1. Router 处理页面路由，deep link，web跨平台跳转
 2. Service 接口
 3. Task 模块启动服务， 提供服务队列来初始化
+
 
 ## Example
 

@@ -8,10 +8,11 @@
 #import "ViewController.h"
 #import <JDModuleManager/JDRouterManager.h>
 #import <JDModuleManager/JDModuleServeManager.h>
-#import "Router.h"
+#import <JDModuleRouter/JDRouter.h>
 #import <JDModuleService/CModuleServiceProtocol.h>
 #import <JDModuleService/BModuleServiceProtocol.h>
 #import <JDModuleService/AModuleServiceProtocol.h>
+#import <JDModuleService/DModuleServiceProtocol.h>
 
 @interface ViewController ()
 
@@ -49,6 +50,13 @@
         [openC1Servie setBackgroundColor:[UIColor redColor]];
         [openC1Servie addTarget:self action:@selector(openC1ServiceAction) forControlEvents:UIControlEventTouchUpInside];
     }
+    
+    
+    UIButton *openC1Servie = [[UIButton alloc] initWithFrame:CGRectMake(0, 350, 200, 50)];
+    [self.view addSubview:openC1Servie];
+    [openC1Servie setTitle:@"call CD router" forState:UIControlStateNormal];
+    [openC1Servie setBackgroundColor:[UIColor redColor]];
+    [openC1Servie addTarget:self action:@selector(openDRouterAction) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)openA1Action {
@@ -62,6 +70,11 @@
 - (void)openC1ServiceAction {
     id<CModuleServiceProtocol> protocol = [[JDModuleServeManager oneInstance] serviceOfProtocol:@protocol(CModuleServiceProtocol)];
     [protocol cService1];
+}
+
+- (void)openDRouterAction {
+    id<DModuleServiceProtocol> protocol = [[JDModuleServeManager oneInstance] serviceOfProtocol:@protocol(DModuleServiceProtocol)];
+    [protocol dService1];
 }
 
 @end

@@ -32,6 +32,8 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'JDModuleRouter/Classes/**/*'
   
+#  s.module_map = 'Module/module.modulemap'
+  
   # s.resource_bundles = {
   #   'JDModuleRouter' => ['JDModuleRouter/Assets/*.png']
   # }

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)dService1;
 
+- (BOOL)dModuleAuth:(NSURL *)url;
+
 @end
 
 

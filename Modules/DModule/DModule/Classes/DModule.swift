@@ -13,8 +13,24 @@ import Foundation
 
 @objc(DModule)
 public class DModule: NSObject, JDModuleRegisterProtocol, DModuleServiceProtocol {
+    public func dModuleAuth(_ url: URL) -> Bool {
+        GHApiManager.shared.auth(url: url)
+        
+        return true
+    }
+    
+//    let octocatApi = "https://api.github.com/users/octocat"
+    
     public func dService1() {
-        print("d servie1")
+        
+        if let _ = DGHUserGateway.shared.profile {
+            if let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+                let vc = DGHProfileViewController()
+                nav.pushViewController(vc, animated: true)
+            }
+        } else {
+            GHApiManager.shared.openGithubWeb()
+        }
     }
     
     
@@ -42,4 +58,24 @@ public class DModule: NSObject, JDModuleRegisterProtocol, DModuleServiceProtocol
         return [info]
     }
     
+}
+
+
+extension Array {
+    func map2<T>(_ transform: (Element) -> T) -> [T] {
+        var result: [T] = []
+        result.reserveCapacity(count)
+        for x in self {
+            result.append(transform(x))
+        }
+        return result
+    }
+    
+    func flatMap2<T>(_ transform: (Element) -> [T]) -> [T] {
+        var result: [T] = []
+        for x in self {
+            result.append(contentsOf: transform(x))
+        }
+        return result
+    }
 }

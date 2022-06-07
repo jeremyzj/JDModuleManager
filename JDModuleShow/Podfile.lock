@@ -1,22 +1,43 @@
 PODS:
+  - Alamofire (5.6.1)
   - BModule (0.1.0):
     - JDModuleManager
     - JDModuleRouter
     - JDModuleService
   - DModule (0.1.0):
+    - Alamofire
     - JDModuleManager
     - JDModuleRouter
     - JDModuleService
+    - SDWebImage
+    - SnapKit
+    - SwiftyJSON
   - JDModuleManager (0.1.0)
   - JDModuleRouter (0.1.0)
   - JDModuleService (0.1.0)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SnapKit (5.6.0)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - Alamofire
   - BModule (from `../Modules/BModule`)
   - DModule (from `../Modules/DModule`)
   - JDModuleManager (from `../`)
   - JDModuleRouter (from `../Modules/JDModuleRouter`)
   - JDModuleService (from `../Modules/JDModuleService`)
+  - SDWebImage
+  - SnapKit
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - Alamofire
+    - SDWebImage
+    - SnapKit
+    - SwiftyJSON
 
 EXTERNAL SOURCES:
   BModule:
@@ -31,12 +52,16 @@ EXTERNAL SOURCES:
     :path: "../Modules/JDModuleService"
 
 SPEC CHECKSUMS:
-  BModule: 2fa08026add826283c27a7124e9a41e783df156f
-  DModule: ac39e44a1ed046cb1e6194a4ad387249f5fc10ae
-  JDModuleManager: 54a90a0295c6becd56b498fed4b8b40639cc7023
-  JDModuleRouter: 611af66c3e2b84938f33108c0bac0e030ab9be75
-  JDModuleService: 8e3432d22e74a4652e83f1e291a30fd833562bdb
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  BModule: 5d6e796f24dfbb08f9b04617299b7ebc829ff9a2
+  DModule: fe6ed6ab122fb8d37c4d9dfe264cbb432bdcdee4
+  JDModuleManager: f63c2f3ed2eb2a1205c01617c0db1222b52662b2
+  JDModuleRouter: c92761d2993a65c63bc51c1a007f5e6cea05a450
+  JDModuleService: b54d864d8f2900e62770e55b5cf4de6eec5e309b
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: aea10db2fab37216103be67e288f41e9864b1c9a
+PODFILE CHECKSUM: d254c02e9f5855cceb7e7182b1d2ffbfa4ec09af
 
 COCOAPODS: 1.11.2

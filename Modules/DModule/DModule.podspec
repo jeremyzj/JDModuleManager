@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/Hello-World/DModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'DModule/Classes/**/*'
   
@@ -42,4 +42,8 @@ TODO: Add long description of the pod here.
   s.dependency 'JDModuleManager'
   s.dependency 'JDModuleService'
   s.dependency 'JDModuleRouter'
+  s.dependency 'Alamofire'
+  s.dependency 'SwiftyJSON'
+  s.dependency 'SnapKit'
+  s.dependency 'SDWebImage'
 end

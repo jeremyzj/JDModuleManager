@@ -6,6 +6,8 @@
 //
 
 #import "SceneDelegate.h"
+#import <JDModuleService/DModuleServiceProtocol.h>
+#import <JDModuleManager/JDModuleServeManager.h>
 
 @interface SceneDelegate ()
 
@@ -52,6 +54,21 @@
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
 }
+
+
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts  API_AVAILABLE(ios(13.0)){
+    NSArray *contexts = [URLContexts allObjects];
+    if (contexts.count == 0) {
+        return;
+    }
+    
+    UIOpenURLContext *urlContext = contexts.firstObject;
+    NSURL *url = urlContext.URL;
+    
+    id<DModuleServiceProtocol> protocol = [[JDModuleServeManager oneInstance] serviceOfProtocol:@protocol(DModuleServiceProtocol)];
+    [protocol dModuleAuth:url];
+}
+
 
 
 @end

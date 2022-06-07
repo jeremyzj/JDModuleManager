@@ -22,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"github demo";
 
     id<AModuleServiceProtocol> protocolA = [[JDModuleServeManager oneInstance] serviceOfProtocol:@protocol(AModuleServiceProtocol)];
     if (protocolA) {

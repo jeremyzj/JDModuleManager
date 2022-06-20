@@ -52,7 +52,7 @@ class DGHContributionsGateway {
                 print(count, date, level)
             }
             
-            print(els)
+//            print(els)
         } catch Exception.Error(let type, let message) {
             print(message, type)
         } catch {

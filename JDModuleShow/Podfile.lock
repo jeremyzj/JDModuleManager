@@ -1,6 +1,14 @@
 PODS:
   - Alamofire (5.6.1)
+  - AModule (0.1.0):
+    - JDModuleManager
+    - JDModuleRouter
+    - JDModuleService
   - BModule (0.1.0):
+    - JDModuleManager
+    - JDModuleRouter
+    - JDModuleService
+  - CModule (0.1.0):
     - JDModuleManager
     - JDModuleRouter
     - JDModuleService
@@ -9,39 +17,53 @@ PODS:
     - JDModuleManager
     - JDModuleRouter
     - JDModuleService
+    - RxSwift
     - SDWebImage
     - SnapKit
+    - SwiftSoup
     - SwiftyJSON
   - JDModuleManager (0.1.0)
   - JDModuleRouter (0.1.0)
   - JDModuleService (0.1.0)
+  - RxSwift (6.5.0)
   - SDWebImage (5.12.5):
     - SDWebImage/Core (= 5.12.5)
   - SDWebImage/Core (5.12.5)
   - SnapKit (5.6.0)
+  - SwiftSoup (2.4.2)
   - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - AModule (from `../Modules/AModule`)
   - BModule (from `../Modules/BModule`)
+  - CModule (from `../Modules/CModule`)
   - DModule (from `../Modules/DModule`)
   - JDModuleManager (from `../`)
   - JDModuleRouter (from `../Modules/JDModuleRouter`)
   - JDModuleService (from `../Modules/JDModuleService`)
+  - RxSwift
   - SDWebImage
   - SnapKit
+  - SwiftSoup
   - SwiftyJSON
 
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - Alamofire
+    - RxSwift
     - SDWebImage
     - SnapKit
+    - SwiftSoup
     - SwiftyJSON
 
 EXTERNAL SOURCES:
+  AModule:
+    :path: "../Modules/AModule"
   BModule:
     :path: "../Modules/BModule"
+  CModule:
+    :path: "../Modules/CModule"
   DModule:
     :path: "../Modules/DModule"
   JDModuleManager:
@@ -53,15 +75,19 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  AModule: 2b5df5f98824af791e53cf9cd186a0356d3ffb81
   BModule: 5d6e796f24dfbb08f9b04617299b7ebc829ff9a2
-  DModule: fe6ed6ab122fb8d37c4d9dfe264cbb432bdcdee4
+  CModule: f81e830a54c351f043cab4c73839db990ca21f20
+  DModule: cf22e721bc46b46634caec40d362c1125f5e3ef3
   JDModuleManager: f63c2f3ed2eb2a1205c01617c0db1222b52662b2
   JDModuleRouter: c92761d2993a65c63bc51c1a007f5e6cea05a450
   JDModuleService: b54d864d8f2900e62770e55b5cf4de6eec5e309b
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftSoup: 7589ceac3b38cef742a96981cfe2b14ba55ce1e3
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: d254c02e9f5855cceb7e7182b1d2ffbfa4ec09af
+PODFILE CHECKSUM: f6a3b6f5c29b4793a4241bd578645bbb7e66337b
 
 COCOAPODS: 1.11.2

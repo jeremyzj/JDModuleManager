@@ -37,6 +37,71 @@
 2. Service 接口
 3. Task 模块启动服务， 提供服务队列来初始化
 
+## 使用
+
+1. 定义一个模块
+
+实现JDModuleRegisterProtocol协议
+* 注册路由
+* 注册方法
+* 注册启动任务
+
+```objc
+@interface SomeModuleDemoImpl : NSObject<JDModuleRegisterProtocol>
+@end
+
+/** 注册路由
+   定义好路由 kSomeRouter1, kSomeRouter1 实现registModuleRoutes方法，即可注册好对应的路由
+   @return 路由数组
+*/
+- (NSArray<NSString *> *)registModuleRoutes {
+    return @[kSomeRouter1, kSomeRouter2];
+}
+
+/** 路由调用
+   定义好路由 会通过实现handleRouteWithScheme:host:path:params:方法, 来自定义跳转
+   @params scheme
+   @params host
+   @params path
+   @params params
+   @return BOOL 
+*/
+- (BOOL)handleRouteWithScheme:(NSString *)scheme
+                         host:(NSString *)host
+                         path:(NSString *)path
+                       params:(NSDictionary *)params {
+    NSString *router = [NSString stringWithFormat:@"%@://%@", scheme, host];
+    if ([router isEqualToString:kARouter1]) {
+        NSLog(@"kARouter1");
+    } else if ([router isEqualToString:kARouter2]) {
+        NSLog(@"kARouter2");
+    }
+    return YES;
+}
+
+/** 
+ 定义接口协议
+ @return 接口数组
+*/
+- (NSArray<JDModuleServiceInfo *> *)registModuleServices {
+    JDModuleServiceInfo *info = [JDModuleServiceInfo new];
+    info.protocol = @protocol(AModuleServiceProtocol);
+    info.implClass = AModuleDemo.class;
+    
+    return @[info];
+}
+
+/**
+ 定义启动task
+ @return 启动任务类
+*/
+- (NSArray<Class<JDLaunchTaskProtocol>> *)registLaunchTasks {
+    return @[[AModuleTask class]];
+}
+```
+
+
+
 
 ## Example
 

@@ -46,4 +46,6 @@ TODO: Add long description of the pod here.
   s.dependency 'SwiftyJSON'
   s.dependency 'SnapKit'
   s.dependency 'SDWebImage'
+  s.dependency 'RxSwift'
+  s.dependency 'SwiftSoup'
 end

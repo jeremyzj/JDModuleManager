@@ -53,12 +53,14 @@
         [openC1Servie addTarget:self action:@selector(openC1ServiceAction) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    
-    UIButton *openC1Servie = [[UIButton alloc] initWithFrame:CGRectMake(0, 350, 200, 50)];
-    [self.view addSubview:openC1Servie];
-    [openC1Servie setTitle:@"call CD router" forState:UIControlStateNormal];
-    [openC1Servie setBackgroundColor:[UIColor redColor]];
-    [openC1Servie addTarget:self action:@selector(openDRouterAction) forControlEvents:UIControlEventTouchUpInside];
+    id<DModuleServiceProtocol> protocolD = [[JDModuleServeManager oneInstance] serviceOfProtocol:@protocol(DModuleServiceProtocol)];
+    if (protocolD) {
+        UIButton *openC1Servie = [[UIButton alloc] initWithFrame:CGRectMake(0, 400, 200, 50)];
+        [self.view addSubview:openC1Servie];
+        [openC1Servie setTitle:@"call D service" forState:UIControlStateNormal];
+        [openC1Servie setBackgroundColor:[UIColor redColor]];
+        [openC1Servie addTarget:self action:@selector(openDRouterAction) forControlEvents:UIControlEventTouchUpInside];
+    }
 }
 
 - (void)openA1Action {

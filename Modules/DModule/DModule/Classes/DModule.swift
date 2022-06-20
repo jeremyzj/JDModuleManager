@@ -11,6 +11,17 @@ import JDModuleRouter
 import JDModuleService
 import Foundation
 
+
+func format<A>(_ value: A) -> String {
+    String(describing: value)
+}
+
+func process<B>(_ input: B) -> String {
+    let formated = format(input)
+    return formated
+}
+
+
 @objc(DModule)
 public class DModule: NSObject, JDModuleRegisterProtocol, DModuleServiceProtocol {
     public func dModuleAuth(_ url: URL) -> Bool {

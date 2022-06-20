@@ -32,6 +32,9 @@ class DGHProfileViewController: UIViewController {
         tableView.register(DHProfileHeaderTableViewCell.self, forCellReuseIdentifier: kHeaderCellIdentifier)
         
         self.profileTable = tableView
+        
+        DGHContributionsGateway.shared.profile = DGHUserGateway.shared.profile
+        DGHContributionsGateway.shared.fetchGHContrubution(model: GHApiManager.shared.dghModel!)
     }
 }
 
@@ -61,6 +64,6 @@ extension DGHProfileViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 290 : 50
+        return indexPath.row == 0 ? 190 : 50
     }
 }

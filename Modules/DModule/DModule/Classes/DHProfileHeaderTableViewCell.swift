@@ -130,7 +130,7 @@ class DHProfileHeaderView: UIView {
         
         if let headerImageView = self.headerImageView {
             self.nameLabel?.snp.makeConstraints({ make in
-                make.left.equalTo(headerImageView.snp.right).offset(157)
+                make.left.equalTo(headerImageView.snp.right).offset(15)
                 make.top.equalTo(47)
                 make.right.equalTo(0)
                 make.height.equalTo(17)

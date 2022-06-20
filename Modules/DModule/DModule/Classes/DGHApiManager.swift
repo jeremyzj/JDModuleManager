@@ -21,6 +21,7 @@ class GHApiManager {
     let clientSecret: String = "c22f349db13dcb1d37c8b2f5823ce215c5382294"
     
     static let shared = GHApiManager()
+    var dghModel:DGHModel?
     
     func openGithubWeb() {
         let authPath:String = "\(authPath)?client_id=\(clientID)&scope=repo&state=TEST_STATE"
@@ -59,6 +60,7 @@ class GHApiManager {
         
         let resultParams:Array<String> = responseStr.split(separator: "&").map{ String($0) }
         let dghModel = DGHModel(paramsArray: resultParams)
+        self.dghModel = dghModel
         
         DGHUserGateway.shared.fetchGHUserInfo(model: dghModel)
     }

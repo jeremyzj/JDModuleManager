@@ -4,9 +4,9 @@ platform :ios, '12.0'
 use_frameworks!
 target 'JDModuleShow' do
     pod 'JDModuleManager', :path=>'../'
-#    pod 'AModule', :path=>'../Modules/AModule'
+    pod 'AModule', :path=>'../Modules/AModule'
     pod 'BModule', :path=>'../Modules/BModule'
-#    pod 'CModule', :path=>'../Modules/CModule'
+    pod 'CModule', :path=>'../Modules/CModule'
     pod 'JDModuleService', :path=>'../Modules/JDModuleService'
     pod 'JDModuleRouter', :path=>'../Modules/JDModuleRouter'
     pod 'DModule', :path=>'../Modules/DModule'
@@ -14,5 +14,7 @@ target 'JDModuleShow' do
     pod 'SwiftyJSON'
     pod 'SnapKit'
     pod 'SDWebImage'
+    pod 'RxSwift'
+    pod 'SwiftSoup'
 end
   

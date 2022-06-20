@@ -6,7 +6,7 @@
 //
 
 #import "CModuleDemo.h"
-#import <JDModuleRouter/Router.h>
+#import <JDModuleRouter/JDRouter.h>
 #import <JDModuleManager/JDModuleServiceInfo.h>
 
 @implementation CModuleDemo

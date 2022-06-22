@@ -1,6 +1,6 @@
 {
     "modules": [
-        
+        "AModuleDemo",
         "BModuleDemo",
         "CModuleDemo",
         "DModule"

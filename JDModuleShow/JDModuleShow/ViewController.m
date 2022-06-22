@@ -29,8 +29,8 @@
     if (protocolA) {
         UIButton *openA1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 200, 50)];
         [self.view addSubview:openA1];
-        [openA1 setTitle:@"open A1 router" forState:UIControlStateNormal];
-        [openA1 setBackgroundColor:[UIColor redColor]];
+        [openA1 setTitle:@"A 模块" forState:UIControlStateNormal];
+        [openA1 setBackgroundColor:[UIColor colorNamed:@"CommonOperationColor"]];
         [openA1 addTarget:self action:@selector(openA1Action) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -39,8 +39,8 @@
     if (protocolB) {
         UIButton *openBServie = [[UIButton alloc] initWithFrame:CGRectMake(0, 200, 200, 50)];
         [self.view addSubview:openBServie];
-        [openBServie setTitle:@"open B service" forState:UIControlStateNormal];
-        [openBServie setBackgroundColor:[UIColor redColor]];
+        [openBServie setTitle:@"B 模块" forState:UIControlStateNormal];
+        [openBServie setBackgroundColor:[UIColor colorNamed:@"CommonOperationColor"]];
         [openBServie addTarget:self action:@selector(openBServiceAction) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -48,8 +48,8 @@
     if (protocolC) {
         UIButton *openC1Servie = [[UIButton alloc] initWithFrame:CGRectMake(0, 300, 200, 50)];
         [self.view addSubview:openC1Servie];
-        [openC1Servie setTitle:@"call C1 service" forState:UIControlStateNormal];
-        [openC1Servie setBackgroundColor:[UIColor redColor]];
+        [openC1Servie setTitle:@"C 模块" forState:UIControlStateNormal];
+        [openC1Servie setBackgroundColor:[UIColor colorNamed:@"CommonOperationColor"]];
         [openC1Servie addTarget:self action:@selector(openC1ServiceAction) forControlEvents:UIControlEventTouchUpInside];
     }
     
@@ -57,8 +57,8 @@
     if (protocolD) {
         UIButton *openC1Servie = [[UIButton alloc] initWithFrame:CGRectMake(0, 400, 200, 50)];
         [self.view addSubview:openC1Servie];
-        [openC1Servie setTitle:@"call D service" forState:UIControlStateNormal];
-        [openC1Servie setBackgroundColor:[UIColor redColor]];
+        [openC1Servie setTitle:@"github demo" forState:UIControlStateNormal];
+        [openC1Servie setBackgroundColor:[UIColor colorNamed:@"CommonOperationColor"]];
         [openC1Servie addTarget:self action:@selector(openDRouterAction) forControlEvents:UIControlEventTouchUpInside];
     }
 }

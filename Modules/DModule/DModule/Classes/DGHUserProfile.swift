@@ -7,6 +7,12 @@
 
 import Foundation
 
+class DGHUser {
+    static let shared = DGHUser()
+    var profile: DGHUserProfile?
+    var model: DGHAuthModel?
+}
+
 
 public struct DGHUserProfile: Codable {
     var bio: String
@@ -21,6 +27,9 @@ public struct DGHUserProfile: Codable {
     var publicGists: Int
     var url: String
     var reposUrl: String
+    var company: String
+    var location: String
+    var email: String
     var createAtDate: String {
         get {
             guard let date = stringToFormatDate(createdAt) else {
@@ -38,7 +47,7 @@ public struct DGHUserProfile: Codable {
         case publicRepos = "public_repos"
         case reposUrl = "repos_url"
         case publicGists = "public_gists"
-        case bio, login, followers, url, following
+        case bio, login, followers, url, following, company, location, email
     }
 }
 

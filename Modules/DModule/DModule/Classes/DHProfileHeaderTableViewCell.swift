@@ -204,6 +204,7 @@ class DHProfileHeaderView: UIView {
 
 class DHProfileHeaderTableViewCell: UITableViewCell {
     var profileHeaderView : DHProfileHeaderView?
+    var contributionView : DHGContributionView?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -219,12 +220,25 @@ class DHProfileHeaderTableViewCell: UITableViewCell {
         let profileHeaderView = DHProfileHeaderView()
         self.addSubview(profileHeaderView)
         self.profileHeaderView = profileHeaderView
+        
+        let contributionView = DHGContributionView()
+        contributionView.layer.masksToBounds = true
+        contributionView.layer.cornerRadius = 2.0
+        self.addSubview(contributionView)
+        self.contributionView = contributionView
     }
     
     func setupConstraint() {
         self.profileHeaderView?.snp.makeConstraints({ make in
             make.top.left.right.equalTo(0)
             make.height.equalTo(190)
+        })
+        
+        self.contributionView?.snp.makeConstraints({ make in
+            make.top.equalTo(180)
+            make.left.equalTo(11)
+            make.right.equalTo(-11)
+            make.bottom.equalTo(-10)
         })
     }
     

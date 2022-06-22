@@ -30,11 +30,10 @@ public class DModule: NSObject, JDModuleRegisterProtocol, DModuleServiceProtocol
         return true
     }
     
-//    let octocatApi = "https://api.github.com/users/octocat"
     
     public func dService1() {
         
-        if let _ = DGHUserGateway.shared.profile {
+        if let _ = DGHUser.shared.profile {
             if let nav = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
                 let vc = DGHProfileViewController()
                 nav.pushViewController(vc, animated: true)

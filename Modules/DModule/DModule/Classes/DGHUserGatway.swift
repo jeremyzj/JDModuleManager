@@ -9,21 +9,17 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-let kGitHubAccept = "application/vnd.github.v3+json"
 let kGitHubUserProfileApi = "https://api.github.com/user"
 
 class DGHUserGateway {
-    static let shared = DGHUserGateway()
-    var profile:DGHUserProfile?
     
-    func fetchGHUserInfo(model: DGHModel) {
-        let header: HTTPHeaders = ["Accept": kGitHubAccept, "Authorization": "token \(model.accessToken)"]
+    func fetchGHUserInfo() {
+        let model = DGHUserGatewayModel()
         
-        AF.request(kGitHubUserProfileApi, method: .get, headers: header)
+        GHGateway.shared.request(model)
             .response { [weak self] response  in
             switch response.result {
             case .success(let value):
-                print(try! JSON(data: value ?? Data()))
                 self?.resultUser(info: value ?? Data())
             case .failure(let error):
                 print(error)
@@ -35,11 +31,35 @@ class DGHUserGateway {
         do {
             let jsonDecoder = JSONDecoder()
             let user: DGHUserProfile = try jsonDecoder.decode(DGHUserProfile.self, from: info)
-            profile = user
+            DGHUser.shared.profile = user
             print(user)
         } catch (let error) {
             print(error)
         }
     }
 }
+
+
+
+struct DGHUserGatewayModel: GHGatewayModelProtocol {
+    var accessToken: String {
+        get {
+            DGHUser.shared.model?.accessToken ?? ""
+        }
+    }
+    
+    var url: String {
+        get {
+            kGitHubUserProfileApi
+        }
+    }
+    
+    var method: HTTPMethod {
+        get {
+            .get
+        }
+    }
+}
+
+
 

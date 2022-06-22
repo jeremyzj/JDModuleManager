@@ -11,15 +11,27 @@ import SnapKit
 let kCellIdentifier = "kCellIdentifier"
 let kHeaderCellIdentifier = "kHeaderCellIdentifier"
 
+struct DGHCell {
+    let title: String
+    let height: Float
+    let value: String
+}
+
 class DGHProfileViewController: UIViewController {
     
-    let tableArray = [1, 2, 3, 4, 5, 6, 7]
+    let tableArray: Array<DGHCell> = [
+        DGHCell(title: "header", height: 315, value: ""),
+        DGHCell(title: "Company", height: 45, value: DGHUser.shared.profile?.company ?? ""),
+        DGHCell(title: "Email", height: 45, value: DGHUser.shared.profile?.email ?? ""),
+        DGHCell(title: "Location", height: 45, value: DGHUser.shared.profile?.location ?? ""),
+        DGHCell(title: "About", height: 45, value: "")
+    ]
     var profileTable: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.navigationBar.isHidden = true
+//        self.view.backgroundColor = UIColor.black
+//        self.navigationController?.navigationBar.isHidden = true
 
         let tableView: UITableView = UITableView(frame: .zero, style: .plain)
         self.view.addSubview(tableView)
@@ -28,13 +40,10 @@ class DGHProfileViewController: UIViewController {
         }
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: kCellIdentifier)
+        tableView.register(DGHProfileTableViewCell.self, forCellReuseIdentifier: kCellIdentifier)
         tableView.register(DHProfileHeaderTableViewCell.self, forCellReuseIdentifier: kHeaderCellIdentifier)
-        
         self.profileTable = tableView
         
-        DGHContributionsGateway.shared.profile = DGHUserGateway.shared.profile
-        DGHContributionsGateway.shared.fetchGHContrubution(model: GHApiManager.shared.dghModel!)
     }
 }
 
@@ -51,19 +60,28 @@ extension DGHProfileViewController: UITableViewDataSource {
         
         if indexPath.item == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: kHeaderCellIdentifier, for: indexPath)
-            if let headerCell = cell as? DHProfileHeaderTableViewCell, let profile = DGHUserGateway.shared.profile {
+            if let headerCell = cell as? DHProfileHeaderTableViewCell, let profile = DGHUser.shared.profile {
                 headerCell.configureHeader(profile: profile)
             }
+            cell.selectionStyle = .none
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: kCellIdentifier, for: indexPath)
-            let item = self.tableArray[indexPath.item]
-            cell.textLabel?.text = String(item)
+            if let profileCell = cell as? DGHProfileTableViewCell {
+                
+                let item = self.tableArray[indexPath.item]
+                profileCell.itemTitleLabel.text = item.title
+                profileCell.itemContentLabel.text = item.value
+            }
+            
+            
+            cell.selectionStyle = .none
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 190 : 50
+        let item = self.tableArray[indexPath.item]
+        return CGFloat(item.height)
     }
 }

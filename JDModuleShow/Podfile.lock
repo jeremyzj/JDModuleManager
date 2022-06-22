@@ -1,9 +1,5 @@
 PODS:
   - Alamofire (5.6.1)
-  - AModule (0.1.0):
-    - JDModuleManager
-    - JDModuleRouter
-    - JDModuleService
   - BModule (0.1.0):
     - JDModuleManager
     - JDModuleRouter
@@ -35,7 +31,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - AModule (from `../Modules/AModule`)
   - BModule (from `../Modules/BModule`)
   - CModule (from `../Modules/CModule`)
   - DModule (from `../Modules/DModule`)
@@ -58,8 +53,6 @@ SPEC REPOS:
     - SwiftyJSON
 
 EXTERNAL SOURCES:
-  AModule:
-    :path: "../Modules/AModule"
   BModule:
     :path: "../Modules/BModule"
   CModule:
@@ -75,7 +68,6 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  AModule: 2b5df5f98824af791e53cf9cd186a0356d3ffb81
   BModule: 5d6e796f24dfbb08f9b04617299b7ebc829ff9a2
   CModule: f81e830a54c351f043cab4c73839db990ca21f20
   DModule: cf22e721bc46b46634caec40d362c1125f5e3ef3
@@ -88,6 +80,6 @@ SPEC CHECKSUMS:
   SwiftSoup: 7589ceac3b38cef742a96981cfe2b14ba55ce1e3
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: f6a3b6f5c29b4793a4241bd578645bbb7e66337b
+PODFILE CHECKSUM: 9c59684220f63d9c01310fe8ed8774a6b3125b7b
 
 COCOAPODS: 1.11.2

@@ -1,5 +1,5 @@
 //
-//  DGHModel.swift
+//  DGHAuthModel.swift
 //  DModule
 //
 //  Created by Mac on 2022/6/4.
@@ -8,13 +8,13 @@
 import Foundation
 import Alamofire
 
-enum DGHModelEnum: String {
+enum DGHAuthModelEnum: String {
     case token = "access_token"
     case scope = "scope"
     case type  = "token_type"
 }
 
-struct DGHModel {
+struct DGHAuthModel {
     var accessToken: String = ""
     var scope: String = ""
     var tokenType: String = ""
@@ -29,9 +29,9 @@ struct DGHModel {
             
             let valueKey: String = paramValues[0]
             let value: String = paramValues[1]
-            if valueKey == DGHModelEnum.token.rawValue {
+            if valueKey == DGHAuthModelEnum.token.rawValue {
                 accessToken = value
-            } else if valueKey == DGHModelEnum.scope.rawValue {
+            } else if valueKey == DGHAuthModelEnum.scope.rawValue {
                 scope = value
             } else {
                 tokenType = value
